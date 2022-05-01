@@ -1,0 +1,76 @@
+
+.text-fill {
+  margin-top: 20px;
+  text-decoration: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: thin pink;
+}
+
+.text-fill:hover {
+  -webkit-text-fill-color: pink;
+}
+
+
+legend{
+  font-size: 40px;
+  text-align: center;
+  --font-primary: 'Space Mono', sans-serif;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+.inputs_texto{
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+.input_txt{
+  background: none;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  color: white;
+  font-size: 18px;
+  width: 100%;
+  letter-spacing: 0.5px;
+}
+.label_texto{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.input_txt:focus ~ .label_texto,
+.input_txt:valid ~ .label_texto{
+top: -10px;
+font-size: 18.5px;
+color: floralwhite;
+}
+
+.elecciones{
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  padding-bottom: 10px;
+}
+
+.inputs_fecha{
+  font-size: 20px;
+  color: white
+  text-align: center;
+}
+
+.inputs_casillas{
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  padding-bottom: 10px;
+  font-size: 20px;
+  color: white;
+}
+
+
+
+               
+

@@ -1,0 +1,25 @@
+
+.text-fill {
+  text-decoration: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: thin pink;
+  align-content: center;
+}
+
+.text-fill:hover {
+  -webkit-text-fill-color: pink;
+}
+
+legend{
+  font-size: 40px;
+  text-align: center;
+  --font-primary: 'Space Mono', sans-serif;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+.contenedor2{
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  padding-bottom: 20px;
+}
