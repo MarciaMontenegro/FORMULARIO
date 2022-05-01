@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block enlazar %}
+<link rel="stylesheet" href="{{ url_for('static', filename='perfil.css') }}">
+{% endblock%}
+
+{% block contenido %}
+<fieldset>
+      <legend>
+         <p class="text-xxxxl font-bold">
+            <a class="text-fill" href="#0">Perfil creado: </a>
+         </p>
+      </legend>
+      <div class="contenedor2">      
+         <div class="text">
+            <h3>Nombres:</h3>
+            <p>{{ name }}</p>  
+         </div>
+
+         <div class="text">
+            <h3>Apellidos:</h3>
+            <p>{{ lastname }}</p>  
+         </div>
+      </div>
+
+      <div class="contenedor2">      
+         <div class="text">
+            <h3>Sexo:</h3>
+            <p>{{ genero }}</p>  
+         </div>
+
+         <div class="text">
+            <h3>Dni:</h3>
+            <p>{{ dnii }}</p>  
+         </div>
+      </div>
+
+      <div class="contenedor2">      
+         <div class="text">
+            <h3>Fecha de nacimiento:</h3>
+            <p>{{ fecha_nac }}</p>  
+         </div>
+
+         <div class="text">
+            <h3>Profesion:</h3>
+            <p>{{ Profesion }}</p>  
+         </div>
+      </div>
+
+      <div class="contenedor2">      
+         <div class="text">
+            <h3>User:</h3>
+            <p>{{ user }} </p>
+         </div>
+
+         <div class="text">
+            <h3>Correo:</h3>
+            <p>{{ Correo }}</p>  
+         </div>
+      </div>
+
+      <div class="contenedor3">
+         <h3>Preferencias:</h3>
+          <p>
+            <ol>
+               <li>Labiales: {{ labiales }} </li>
+               <li>Sombras: {{ sombras }} </li>
+               <li>Delineadores: {{ delineadores }} </li>
+               <li>Rubores: {{ rubores }} </li>
+               <li>Bases: {{ bases }} </li>
+               <li>Desmaquillantes: {{ desmaquillantes }} </li>                
+               <li>Skin care: {{ skin_care }} </li>                    
+            </ol>
+          </p>
+      </div>
+</fieldset>
+{% endblock%}

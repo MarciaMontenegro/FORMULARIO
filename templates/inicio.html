@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block enlazar %}
+<link rel="stylesheet" href="{{ url_for('static', filename='inicio.css') }}">
+{% endblock%}
+
+{% block contenido %}
+<form action="{{ url_for('perfil') }}" method="post">
+	<fieldset>
+		<legend>
+			<p class="text-xxxxl font-bold">
+		  		<a class="text-fill" href="#0">¡Queremos conocerte mas!</a>
+			</p>
+		</legend>
+		
+		<div class="inputs_texto">
+			<input type="text" class="input_txt" name = "nombre" required>
+			<label class="label_texto">Nombres:</label><br>
+			
+		</div>
+
+		<div class="inputs_texto">
+    		<input type="text" class="input_txt" name="apellido" required>
+			<label class="label_texto">Apellidos:</label><br>
+      </div>
+
+      <div class="inputs_texto">
+			<input type="text" class="input_txt" name="dni" required>
+			<label class="label_texto">Dni:</label><br>
+		</div>	
+
+
+		<div class="elecciones">
+			<div>
+				<label>Sexo:<br><br>
+					<input type="radio" id="sexo1" name="genero" value="Mujer">
+					<label for="sexo1">Mujer</label>
+					<input type="radio" id="sexo2" name="genero" value="Hombre">
+					<label for="sexo2">Hombre</label>
+          	
+		   </div>
+
+		   <div class="inputs_fecha">
+		    	<label>Fecha de nacimiento:<br><br>
+		    		<input type="date" name="nacimiento" id="nacimiento" value="Fecha" required>
+		    	</label><br>
+		   </div>
+		</div>
+		<div class="inputs_texto">
+    		<input type="text" class="input_txt" name = "profesion" required>
+			<label class="label_texto">Profesion:</label><br>
+    	</div>
+
+	   <div class="inputs_texto">
+	   	
+    		<input type="e-mail" class="input_txt" name="correo" required>
+			<label class="label_texto">Correo:</label><br>
+    	</div>
+
+    	<div class="inputs_texto">
+    		<input type="text" class="input_txt" name="user" required>
+			<label class="label_texto">User:</label><br>
+    	</div>
+
+    	
+
+    	<div class="inputs_casillas">
+    		<div class="casillas">
+	    		<label>Preferencias:<br></label><br>
+	    			<input type="checkbox" id="labiales" name="labiales" value=Si> labiales<br>
+	    			<input type="checkbox" id="sombras" name="sombras" value=Si> sombras<br>
+	    			<input type="checkbox" id="delineadores" name="delineadores" value=Si> delineadores<br>
+	    	</div>
+	    	<div class="casillas">
+	    		<br><br>
+	    			<input type="checkbox" id="rubores" name="rubores" value=Si> rubores<br>
+	    			<input type="checkbox" id="bases" name="bases" value=Si> bases<br>
+	    			<input type="checkbox" id="desmaquillantes" name="desmaquillantes" value=Si> desmaquillantes<br>
+	    			<input type="checkbox" id="skin" name="skin_care" value=Si> skin care<br>
+	    	</div>
+    	</div>
+		<input type="submit" value="Enviar">
+
+
+
+	</fieldset>
+</form>
+{% endblock%}
